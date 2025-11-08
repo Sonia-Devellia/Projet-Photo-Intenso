@@ -1,0 +1,294 @@
+:root {
+    --bgcolor-primary: #f78a76; /* Fond corail */
+    --bgcolor-secondary : #25a2c3; /* Fond bleu */
+    --text-bg-dark : #fff;
+    --font-logo:'Pacifico';
+    --font-texte:'Open Sans';
+    --font-titres-bouton:'Montserrat';
+}
+
+/* pacifico-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/pacifico-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/open-sans-v44-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+*
+{
+margin: 0;
+padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+.Container 
+{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Bouton
+{
+    background-color:#f78a76;
+    color:var(--text-bg-dark);
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    font-family: var(--font-titres-bouton);
+    font-weight: bold;
+}
+body{
+    font-family: var(--font-texte);
+}
+
+
+/* HEADER*/
+
+#Bandeau
+{
+    text-align: center;
+    padding: 40px;
+}
+
+#Logo a
+ {
+    font-family: var(--font-logo);
+    color: var(--bgcolor-primary);
+    font-size: 2.5rem;
+
+}
+
+#Menu ul
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Menu li
+{
+   margin:32px 16px 0;
+}
+
+#Menu ul li a 
+{
+    color: black;
+    font-size: 1.2rem;
+}
+
+#Menu ul li a.Principal
+{
+     color:var(--bgcolor-primary);
+}
+#Menu ul li a:hover
+{
+    color:var(--couleur-lien);
+    
+}
+
+/* Bienvenue*/
+
+#Bienvenue
+ {
+    background-image: url(images/paysage.jpg);
+    height: 450px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+#Bienvenue h1
+{
+    color:var(--bgcolor-primary);
+    text-shadow:1px 1px 5px rgba(0, 0, 0, 0.487);
+    font-family:var(--font-titres-bouton);
+}
+#Bienvenue p 
+{ 
+    width: 60%;
+    color:var(--text-bg-dark);
+    padding:8px 24px;
+    margin: 24px;
+    background-color: rgba(0, 0, 0, 0.314);
+
+}
+
+/* Categories*/
+
+#Categories 
+{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#Categories .Colonne
+{
+    width: 28%;
+}
+#Categories .Colonne h3
+{
+    color: var(--bgcolor-secondary);
+    font-family: var(--font-titres-bouton);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#Categories .Colonne p
+{
+    color: rgb(37, 37, 37);
+    margin-bottom: 24px;
+    font-size: 0.8rem;
+    
+}
+#Categories .Colonne:first-child
+{
+    text-align: right;
+}
+#Categories .Colonne img
+{
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+
+/* CTA*/
+
+#CTA 
+{
+    background-color:var(--bgcolor-primary);
+    color: var(--text-bg-dark);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+#CTA h2
+{
+    font-family:var(--font-titres-bouton);
+    font-weight: bold;
+    color: var(--text-bg-dark);
+}
+#CTA p
+{
+    width: 60%;
+    padding:8px 24px;
+    margin: 24px;
+    text-align: center;
+
+}
+#CTA .Bouton
+{
+    background-color:var(--text-bg-dark);
+    color:var(--bgcolor-primary);
+    font-weight: bold;
+}
+
+/*Enavant*/
+
+#Enavant 
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 48px;
+}
+#Enavant .post
+{
+ width: 28%;
+ border: 1px solid rgba(0, 0, 0, 0.258);
+ padding-bottom: 24px;
+ transition: box-shadow 0.3s ease;
+}
+#Enavant .post:hover
+{
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+#Enavant .post img
+{ 
+    width: 100%;
+}
+#Enavant .post h3,
+#Enavant .post p
+{
+    padding: 16px 16px 0;
+}
+#Enavant .post h3 a
+{
+    color:var(--bgcolor-secondary);
+    font-weight: bold;
+}
+
+/*Footer*/
+
+#Pied 
+{
+    background-color: var(--bgcolor-secondary);
+    color: var(--text-bg-dark);
+   
+}
+#Pied #Contact 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.611);
+}
+#Pied #Contact h3
+{
+    font-family: var(--font-titres-bouton);
+    font-size: 2rem;
+}
+#Pied #Contact ul
+{
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+#Pied #Contact ul i
+{
+    font-size:1.2rem;
+}
+#Pied #Copyright 
+{
+    text-align: center;
+    padding: 24px;
+}
+#Pied #Copyright a
+{ 
+    color: var(--text-bg-dark);
+}
